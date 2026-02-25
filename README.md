@@ -50,10 +50,7 @@ Generate an API key, upload a company dataset, and interact with the AI sales as
 
 Watch a short walkthrough of the system in action:
 
-👉 ![video Demo](video_demo/ai_sales_chat.mp4)
-
-The demo covers:
-
+[Watch Demo Video](https://github.com/nexapytech/ai-sales-agent/releases/download/v1.0/ai_sales_chat.mp4)
 - API key generation  
 - CSV upload  
 - Conversational AI responses   
@@ -216,7 +213,7 @@ AI Engine:
 ![Chat](screenshots/ai_chat.png)
 
 ### Call Placement
-![CALL](screenshots/call.png)
+![CALL](screenshots/calls.png)
 
 ---
 
