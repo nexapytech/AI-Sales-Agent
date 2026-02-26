@@ -40,7 +40,8 @@ This platform transforms structured product datasets into a conversational comme
 
 Test the system here:
 
-👉 https://nexai.nexapytechnologies.com/api/test
+👉 https://nexai.nexapytechnologies.com
+
 
 Generate an API key, upload a company dataset, and interact with the AI sales assistant in real time.
 
