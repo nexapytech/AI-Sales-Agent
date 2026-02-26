@@ -66,7 +66,7 @@ Traditional e-commerce systems rely on filters and keyword search. This project 
 
 ---
 
-## 💡 Solution
+##  Solution
 
 AI Sales Agent enables:
 
