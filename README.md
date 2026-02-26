@@ -120,7 +120,7 @@ Request Body:
 Response:
 
 {
-  "api_key": "abc123xyz456..."
+  "api_key": "your api key"
 }
 ```
 All protected endpoints require:
@@ -205,7 +205,7 @@ AI Engine:
 ## 🖥 Demo Screenshots
 
 ### Home page
-![API Key](screenshots/home_page.png)
+![Key](screenshots/home_page.png)
 
 ### Upload CSV
 ![Upload CSV](screenshots/company_dataset.png)
