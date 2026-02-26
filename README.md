@@ -222,7 +222,7 @@ AI Engine:
 
 The Django-based frontend is available here:
 
-👉 https://nexai.nexapytechnologies.com/api/test
+👉 https://nexai.nexapytechnologies.com
 
 This interface allows:
 
