@@ -1,102 +1,147 @@
 ![CI](https://github.com/nexapytech/ai-sales-agent/actions/workflows/ci.yml/badge.svg)
+
+# 🛠 AI Sales Agent – Dual-Channel Conversational Commerce Platform
+
+An AI-powered sales platform that allows businesses to interact with customers through **dual channels**:  
+- **Text Chat** (powered by LLaMA and company-specific data)  
+- **Live Voice Calls** (powered by OpenAI models via Twilio and VAPI)  
+
+This platform transforms structured product datasets into a **context-aware conversational commerce engine**, enabling real-time sales support, order creation, and intelligent customer engagement.
+---
+## 🧩 Problem
+
+Many businesses have structured product data but lack a **dynamic, intelligent interface** for customer interactions. Traditional systems rely on forms, filters, or keyword searches, which are:
+- Impersonal and slow  
+- Unable to engage users naturally  
+- Limited to text or static interactions  
+
+There is a growing need for **multi-modal interaction**, including both chat and voice, to improve customer engagement, reduce friction, and increase conversion.
+
+---
+
+## 💡 Solution
+
+**AI Sales Agent** solves this problem by offering a **dual-channel, AI-powered sales assistant** that:
+
+- Supports **text chat** using company-specific datasets via LLaMA for contextual responses.  
+- Enables **live voice calls** using OpenAI models, Twilio, and VAPI for real-time conversation.  
+- Provides **secure, token-based API endpoints** for business integration.  
+- Maintains **company-level data isolation**, ensuring that each business’s data and prompts remain private.  
+- Supports **dynamic prompt updates**, so businesses can adjust how the AI responds to customers in both text and voice channels.  
+
+This approach allows businesses to **interact naturally** with customers, whether typing a question or speaking over a live call, while retaining all interactions securely within their own data.
+
+---
+
+##  Features 
+
+| Feature | Description | Why It Matters |
+|----------|-------------|----------------|
+| **Text Chat (LLaMA)** | AI responses tailored to company data | Ensures accurate, contextual answers that reflect your products |
+| **Live Voice Calls (OpenAI + Twilio/VAPI)** | Real-time AI conversation over phone | Allows personal, human-like interactions to boost customer trust |
+| **Company-Specific Prompts** | Custom AI behavior per company | Keeps conversations relevant and brand-aligned |
+| **CSV Product Data Ingestion** | Easy dataset upload | Quickly powers the AI with business-specific product info |
+| **Token-Based API Authentication** | Secure access | Protects endpoints from unauthorized use |
+| **Dual-Channel Support** | Chat + voice | Reaches customers via their preferred channel, increasing engagement |
+| **Dynamic Prompt & Dataset Updates** | Update AI behavior on the fly | Keeps interactions up-to-date with current products and offers |
+| **Order Placement via API** | Customers can order directly | Streamlines sales workflow for businesses |
+| **MySQL Persistent Storage** | Stores datasets and interactions | Provides auditability and history for analytics |
+| **RESTful API Endpoints** | Integrates with other systems | Enables flexible integration with web, mobile, or CRM systems |
+
+---
+
 ## 🛠 Tech Stack
 
-Backend:
-- Python
-- Django
-- Django REST Framework
-- REST API Design
-- Token Authentication
+**Backend**  
+- Python, Django, Django REST Framework  
+- RESTful API Design  
+- Token Authentication  
 
-Database:
-- MySQL
+**Database**  
+- MySQL  
 
-AI:
-- LLaMA Language Model
-- Prompt Engineering
-- Contextual Retrieval
+**AI Text Chat**  
+- LLaMA Language Model  
+- Prompt Engineering & Contextual Retrieval  
 
-Frontend:
-- Django Templates
-- HTML
-- CSS
-- JavaScript
+**AI Voice Call**  
+- OpenAI models for speech generation and understanding  
+- Twilio for phone call delivery  
+- VAPI for call routing and interaction  
 
-CI/CD: GitHub Actions
-OS Tested On: Linux (Ubuntu recommended)
+**Frontend**  
+- Django Templates, HTML, CSS, JavaScript  
 
----
+**CI/CD**  
+- GitHub Actions  
 
-
-# AI Sales Agent  Multi-Tenant Conversational Commerce Platform
-
-An AI-powered sales assistant that enables businesses to upload their company data and interact with customers through intelligent, context-aware conversations.
-
-This platform transforms structured product datasets into a conversational commerce engine powered by LLaMA.
+**OS Tested On**  
+- Linux (Ubuntu recommended)  
 
 ---
 
-## 🚀 Live Demo
+## 🏗 System Architecture
 
-Test the system here:
+![Architecture Diagram](architecture/system_design.png)
 
-👉 https://nexai.nexapytechnologies.com
+**Components & Workflow:**
 
-
-Generate an API key, upload a company dataset, and interact with the AI sales assistant in real time.
+1. Company generates an API key.  
+2. Uploads product dataset via CSV.  
+3. Dataset stored securely in MySQL.  
+4. Configures AI response prompts for chat and voice.  
+5. Customers interact via **text chat** (LLaMA) or **voice call** (OpenAI via Twilio/VAPI).  
+6. AI generates **contextual responses** for text or real-time conversation for voice.  
+7. Orders are placed through authenticated API endpoints.  
 
 ---
+###   AI Chat Flows
 
-## 🎥 Demo Video
+## 🎥 Demo  usage  AI Chat Video
+### Chat Interface
+![Chat](screenshots/ai_chat.png)
 
-Watch a short walkthrough of the system in action:
-
-[Watch Demo Video](https://github.com/nexapytech/ai-sales-agent/releases/download/v1.0/ai_sales_chat.mp4)
+Watch a short walkthrough of the system in action and ai sale agent conversation:
+[Watch how ai-sales chat works ](https://github.com/nexapytech/ai-sales-agent/releases/download/v1.0/ai_sales_chat.mp4)
 - API key generation  
 - CSV upload  
 - Conversational AI responses   
-- Order creation workflow  
+- Order creation workflow
+---
+###   Live Voice Call Flows
+
+### AI sales Voice Call Placement
+![CALL](screenshots/calls.png)
+
+## 🎥 Demo  usage  AI Voice  Call
+
 
 ---
+## 🖥 Demo interface
 
-## 🧩 Problem
+### Home page
+![Key](screenshots/home_page.png)
 
-Many businesses have structured product data but lack an intelligent interface that allows customers to interact with that data conversationally.
+### Upload CSV
+![Upload CSV](screenshots/company_dataset.png)
 
-Traditional e-commerce systems rely on filters and keyword search. This project introduces conversational commerce powered by AI.
-
----
-
-##  Solution
-
-AI Sales Agent enables:
-
-- Multi-tenant company onboarding  
-- Secure API-based authentication  
-- Company-specific dataset ingestion  
-- Prompt customization per business  
-- AI-driven conversational responses  
-- Order placement via API  
-
-Each company operates within its own isolated dataset and prompt configuration.
 
 ---
+## 🌐 Frontend Testing Interface
 
-## 🚀 Features
-
-- Multi-tenant architecture (company-level data isolation)
-- Token-based API key authentication
-- CSV product data ingestion
-- Company-specific AI prompt customization
-- LLaMA-powered contextual responses
-- MySQL-backed persistent storage
-- RESTful API endpoints
-- Order creation system
-- Django-based frontend testing interface
-- Secure token validation for protected endpoints
-
+The Django-based frontend is available here:
+```bash
+👉 https://nexai.nexapytechnologies.com
+```
 ---
+This interface allows:
 
+- API key generation  
+- Dataset upload  
+- dual channel Conversational testing  
+- Order creation  
+---
+## 📡 API Documentation
 ## 🔐 Authentication
 
 The system uses token-based authentication.
@@ -159,91 +204,6 @@ Response:
 ---
 
 
-
-
-## 🏗 System Architecture
-
-![Architecture Diagram](architecture/system_design.png)
-
-### Architecture Components
-
-Frontend:
-- Django Templates
-- HTML
-- CSS
-- JavaScript
-
-Backend API:
-- Django
-- Django REST Framework
-- Token Authentication
-- RESTful API Design
-
-Database:
-- MySQL
-
-AI Engine:
-- LLaMA Language Model
-- Dataset-aware response generation
-- Company-level prompt control
-
----
-
-
-## 🔄 How It Works
-
-1. A company generates an API key.
-2. The company uploads its product dataset via CSV.
-3. The dataset is stored in MySQL.
-4. The company configures its AI response prompt.
-5. Customers interact with the AI sales assistant.
-6. The AI generates contextual responses using LLaMA.
-7. Orders are created through authenticated API endpoints.
-
----
-
-## 🖥 Demo Screenshots
-
-### Home page
-![Key](screenshots/home_page.png)
-
-### Upload CSV
-![Upload CSV](screenshots/company_dataset.png)
-
-### Chat Interface
-![Chat](screenshots/ai_chat.png)
-
-### Call Placement
-![CALL](screenshots/calls.png)
-
----
-
-## 🌐 Frontend Testing Interface
-
-The Django-based frontend is available here:
-
-👉 https://nexai.nexapytechnologies.com
-
-This interface allows:
-
-- API key generation  
-- Dataset upload  
-- Conversational testing  
-- Order creation  
-
----
-
-## 🔐 Security & Design Considerations
-
-- Token-based authentication
-- Company-level dataset isolation
-- Input validation on CSV ingestion
-- Controlled AI prompt updates
-- Backend-protected endpoints
-- Scalable REST API structure
-
----
-
 ## 📩 Source Code Access
 
 The core implementation is currently private while the platform continues to evolve.
@@ -251,11 +211,10 @@ The core implementation is currently private while the platform continues to evo
 If you are a recruiter, engineering team, or company interested in reviewing the implementation or discussing the architecture, please contact me.
 
 📧 samsontobi360@gmail.com  
-📍 Lagos, Nigeria  
+📍 Lagos, Nigeria
 
----
 
-## 🚀 Future Enhancements
+##  Future Enhancements
 
 - Usage analytics dashboard
 - Vector database integration
