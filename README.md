@@ -8,7 +8,7 @@ An AI-powered sales platform that allows businesses to interact with customers t
 
 This platform transforms structured product datasets into a **context-aware conversational commerce engine**, enabling real-time sales support, order creation, and intelligent customer engagement.
 ---
-## 🧩 Problem
+## problem statement
 
 Many businesses have structured product data but lack a **dynamic, intelligent interface** for customer interactions. Traditional systems rely on forms, filters, or keyword searches, which are:
 - Impersonal and slow  
