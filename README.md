@@ -1,6 +1,6 @@
 ![CI](https://github.com/nexapytech/ai-sales-agent/actions/workflows/ci.yml/badge.svg)
 
-# 🛠 AI Sales Agent – Dual-Channel Conversational Commerce Platform
+# 🛠 AI Sales Agent  Dual Channel Conversational Commerce Platform
 
 An AI-powered sales platform that allows businesses to interact with customers through **dual channels**:  
 - **Text Chat** (powered by LLaMA and company-specific data)  
