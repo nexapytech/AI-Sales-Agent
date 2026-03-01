@@ -6,7 +6,7 @@ An AI-powered sales platform that allows businesses to interact with customers t
 - **Text Chat** (powered by LLaMA and company-specific data)  
 - **Live Voice Calls** (powered by OpenAI models via Twilio and VAPI)  
 
-This platform transforms structured product datasets into a **context-aware conversational commerce engine**, enabling real-time sales support, order creation, and intelligent customer engagement.
+This platform transforms structured product datasets into a context-aware conversational commerce engine, enabling real-time sales support, order creation, and intelligent customer engagement.
 ---
 ## problem statement
 
