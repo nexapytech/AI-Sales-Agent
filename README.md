@@ -174,7 +174,7 @@ Rate limits are enforced at the application layer using Django REST Framework th
 ---
 
 
-# 🚀 AI Sales Agent API Documentation
+#  AI Sales Agent API Documentation
 ---
 ```bash
 Base URL:https://nexapyai.nexapytechnologies.com
