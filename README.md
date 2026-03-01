@@ -155,31 +155,6 @@ This interface allows:
 - Order creation  
 ---
 
-# 🔐 Rate Limiting
-
-To ensure system stability, fair usage, and AI cost control, API rate limiting is enforced across sensitive endpoints.
-
-## Protected Endpoints
-
-Rate limiting is applied to:
-
-- `POST /api/chat/`
-- `POST /api/voice-call/`
-- `POST /api/upload/`
-- `POST /api/update-voice-assistant/`
-
-## Why Rate Limiting Matters
-
-- Prevents abuse and spam requests  
-- Protects AI infrastructure from overload  
-- Controls operational costs (LLM + Voice usage)  
-- Ensures fair resource allocation across tenants  
-- Maintains consistent performance under high traffic  
-
-Rate limits are enforced at the application layer using Django REST Framework throttling.
-
----
-
 
 #  AI Sales Agent API Documentation
 ---
@@ -406,7 +381,15 @@ If exceeded:
   "error": "Rate limit exceeded."
 }
 ```
+## Why Rate Limiting Matters
 
+- Prevents abuse and spam requests  
+- Protects AI infrastructure from overload  
+- Controls operational costs (LLM + Voice usage)  
+- Ensures fair resource allocation across tenants  
+- Maintains consistent performance under high traffic  
+
+Rate limits are enforced at the application layer using Django REST Framework throttling.
 ---
 
 # 🛡 Security Recommendations
@@ -453,6 +436,7 @@ For integration issues, contact your backend administrator or development team.
 - Usage analytics dashboard
 - Vector database integration
 - AI payment integration
+- public voice call endnpoint
 
 ## 📩 Source Code Access
 
