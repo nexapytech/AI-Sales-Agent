@@ -1,6 +1,5 @@
 ![CI](https://github.com/nexapytech/ai-sales-agent/actions/workflows/ci.yml/badge.svg)
 
-
 # 🛠 AI Sales Agent Dual Channel Conversational Commerce Platform
 
 AI Sales Agent is a **Dual Channel AI Sales Platform** that enables businesses to interact with customers through:
@@ -87,16 +86,6 @@ This approach allows businesses to **interact naturally** with customers, whethe
 ## 🏗 System Architecture
 
 ![Architecture Diagram](architecture/system_design.png)
-
-**Components & Workflow:**
-
-1. Company generates an API key.  
-2. Uploads product dataset via CSV.  
-3. Dataset stored securely in MySQL.  
-4. Configures AI response prompts for chat and voice.  
-5. Customers interact via **text chat** (LLaMA) or **voice call** (OpenAI via Twilio/VAPI).  
-6. AI generates **contextual responses** for text or real-time conversation for voice.  
-7. Orders are placed through authenticated API endpoints.  
 
 ---
 ###   AI Chat Flows
