@@ -1,8 +1,11 @@
 ![CI](https://github.com/nexapytech/ai-sales-agent/actions/workflows/ci.yml/badge.svg)
 
-# 🛠 AI Sales Agent  Dual Channel Conversational Commerce Platform
 
-An AI-powered sales platform that allows businesses to interact with customers through **dual channels**:  
+# 🛠 AI Sales Agent Dual Channel Conversational Commerce Platform
+
+AI Sales Agent is a **Dual Channel AI Sales Platform** that enables businesses to interact with customers through:
+
+An AI-powered sales platform that allows businesses to interact with customers through **Dual Channels**:  
 - **Text Chat** (powered by LLaMA and company-specific data)  
 - **Live Voice Calls** (powered by OpenAI models via Twilio and VAPI)  
 
@@ -21,7 +24,8 @@ There is a growing need for **multi-modal interaction**, including both chat and
 
 ## 💡 Solution
 
-**AI Sales Agent** solves this problem by offering a **dual-channel, AI-powered sales assistant** that:
+
+AI Sales Agent provides a secure, scalable **Dual Channel AI Sales Solution** that:
 
 - Supports **text chat** using company-specific datasets via LLaMA for contextual responses.  
 - Enables **live voice calls** using OpenAI models, Twilio, and VAPI for real-time conversation.  
@@ -114,6 +118,8 @@ Watch a short walkthrough of the system in action and ai sale agent conversation
 ![CALL](screenshots/calls.png)
 
 ## 🎥 Demo  usage  AI Voice  Call
+Watch a short ai sales voice call in  action
+[Watch how ai-sales chat works ](https://github.com/nexapytech/AI-Sales-Agent/releases/download/v1.1/ai_sales_voice.mp4)
 
 
 ---
@@ -141,68 +147,305 @@ This interface allows:
 - dual channel Conversational testing  
 - Order creation  
 ---
-## 📡 API Documentation
-## 🔐 Authentication
 
-The system uses token-based authentication.
+# 🔐 Rate Limiting
 
-Each business generates an API key before interacting with protected endpoints.
+To ensure system stability, fair usage, and AI cost control, API rate limiting is enforced across sensitive endpoints.
 
-### Generate API Key
+## Protected Endpoints
 
+Rate limiting is applied to:
+
+- `POST /api/chat/`
+- `POST /api/voice-call/`
+- `POST /api/upload/`
+- `POST /api/update-voice-assistant/`
+
+## Why Rate Limiting Matters
+
+- Prevents abuse and spam requests  
+- Protects AI infrastructure from overload  
+- Controls operational costs (LLM + Voice usage)  
+- Ensures fair resource allocation across tenants  
+- Maintains consistent performance under high traffic  
+
+Rate limits are enforced at the application layer using Django REST Framework throttling.
+
+---
+
+
+# 🚀 AI Sales Agent API Documentation
+---
 ```bash
+Base URL:https://nexapyai.nexapytechnologies.com
+```
+---
+```
+/api/test/
+```
 
-POST /api/generate-key/
+This API powers:
 
-Request Body:
+- 🔑 API Key Generation
+- 📊 CSV Product Upload
+- 💬 AI Text Chat (LLaMA)
 
+
+---
+
+# 🔐 Authentication
+
+Most endpoints require **Token Authentication**.
+
+Include this header in all protected requests:
+
+```
+Authorization: Api-Key <your_api_key>
+```
+
+Example:
+
+```
+Authorization: Api-Key abc123xyz456
+```
+
+---
+
+# 📌 Endpoints Overview
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|------------|---------------|
+| POST | `/api/test/authorize/` | Generate API Key | ❌ No |
+| POST | `/api/test/upload_csv/` | Upload Company CSV | ✅ Yes |
+| POST | `/api/test/api/ai_chat/` | AI Text Chat | ✅ Yes |
+
+
+---
+
+# 1️⃣ Generate API Key
+
+Creates an API key for a company.
+
+### Endpoint
+
+```
+POST /api/test/authorize/
+```
+
+### Request Body
+
+```json
 {
   "username": "company_name"
 }
-````
+```
 
-```bash
-Response:
+### Success Response (200)
 
+```json
 {
-  "api_key": "your api key"
+  "api_key": "generated_api_key_here"
 }
 ```
-All protected endpoints require:
 
-Authorization: Token <api_key>
+### Error Response (400)
+
+```json
+{
+  "error": "Invalid username"
+}
+```
+
+---
+
+# 2️⃣ Upload Product CSV
+
+Uploads product data that powers both text and voice AI.
+
+### Endpoint
+
+```
+POST /api/test/upload_csv/
+```
+
+### Headers
+
+```
+Authorization: Api-Key <your_api_key>
+```
+
+### Request Type
+
+Form Data
+
+| Key | Type | Description |
+|-----|------|------------|
+| file | File | CSV file containing product data |
+
+### Success Response (201)
+
+```json
+{
+  "message": "CSV uploaded successfully"
+}
+```
+
+### Error Responses
+
+**401 Unauthorized**
+
+```json
+{
+  "detail": "Invalid or missing token."
+}
+```
+
+**400 Bad Request**
+
+```json
+{
+  "error": "Invalid file format"
+}
+```
 
 ---
 
-## 📡 API Overview
+# 3️⃣ AI Sales Chat (Text)
 
-### Upload Company Data
+Handles contextual AI conversations using company dataset.
 
-POST /api/upload/
+### Endpoint
 
-Form Data:
-file: products.csv
+```
+POST /api/test/api/ai_chat/
+```
 
----
-```bash
-### Chat with AI
+### Headers
 
-POST /api/chat/
+```
+Authorization: Api-Key <your_api_key>
+Content-Type: application/json
+```
 
-Request:
+### Request Body
 
+```json
 {
   "message": "Do you have laptops under $1000?"
 }
+```
 
-Response:
+### Success Response (200)
 
+```json
 {
-  "answer": "Yes, Dell XPS 13 is available for $900."
+  "answer": "Yes, we have Dell XPS 13 available for $900."
 }
 ```
+
+### Error Responses
+
+**401 Unauthorized**
+
+```json
+{
+  "detail": "Authentication credentials were not provided."
+}
+```
+
+**429 Too Many Requests**
+
+```json
+{
+  "error": "Rate limit exceeded. Try again later."
+}
+```
+
 ---
 
+# 4️⃣ AI Voice Call (Coming Soon for Public API)
+
+🚧 **IMPORTANT NOTICE**
+
+The AI Voice Call endpoint is currently **not available for public API integration**.
+
+It is internally connected 
+
+Public API access for voice calls will be released in a future update.
+
+When released, it will be accessible at:
+
+```
+POST https://nexapyai.nexapytechnologies.com/api/test/voice-call/
+```
+
+At this time, this endpoint is restricted for internal system use only.
+
+---
+
+
+# ⚡ Rate Limiting
+
+To prevent abuse, the following limits may apply:
+
+- 60 requests per minute per API key
+- 5 concurrent voice calls per company
+- 10MB maximum CSV upload size
+
+If exceeded:
+
+```json
+{
+  "error": "Rate limit exceeded."
+}
+```
+
+---
+
+# 🛡 Security Recommendations
+
+- Always use HTTPS in production
+- Store API keys securely
+- Rotate API keys periodically
+- Validate CSV files before upload
+- Monitor suspicious usage patterns
+
+---
+
+# 🔄 Full Integration Flow
+
+1. Generate API Key → `/api/test/authorize/`
+2. Upload Company Products → `/api/test/upload_csv/`
+3. Integrate Text Chat → `/api/test/api/ai_chat/`
+
+---
+
+# 🧠 System Architecture
+
+Frontend / Website  
+↓  
+Django REST API  
+↓  
+- MySQL (Product Data)  
+- LLaMA (Text AI)  
+- Twilio (Voice Calls)  
+- VAPI (Voice Assistant Logic)  
+- OpenAI (Speech & AI Processing)
+
+---
+
+# 📞 Support
+
+For integration issues, contact your backend administrator or development team.
+
+---
+
+© 2026 AI Sales Agent System
+##  Future Enhancements
+
+- Usage analytics dashboard
+- Vector database integration
+- AI payment integration
 
 ## 📩 Source Code Access
 
@@ -212,10 +455,3 @@ If you are a recruiter, engineering team, or company interested in reviewing the
 
 📧 samsontobi360@gmail.com  
 📍 Lagos, Nigeria
-
-
-##  Future Enhancements
-
-- Usage analytics dashboard
-- Vector database integration
-- AI payment integration
