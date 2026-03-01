@@ -433,3 +433,15 @@ If you are a recruiter, engineering team, or company interested in reviewing the
 
 📧 samsontobi360@gmail.com  
 📍 Lagos, Nigeria
+
+
+## 🛠 Support
+
+For integration issues or troubleshooting:
+
+- Email: 📧 samsontobi360@gmail.com  
+- Website: 🌐 https://nexapytechnologies.com  
+
+---
+
+© 2026 NexaPy Technologies. All Rights Reserved.
