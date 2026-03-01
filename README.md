@@ -2,8 +2,6 @@
 
 # 🛠 AI Sales Agent Dual Channel Conversational Commerce Platform
 
-AI Sales Agent is a **Dual Channel AI Sales Platform** that enables businesses to interact with customers through:
-
 An AI-powered sales platform that allows businesses to interact with customers through **Dual Channels**:  
 - **Text Chat** (powered by LLaMA and company-specific data)  
 - **Live Voice Calls** (powered by OpenAI models via Twilio and VAPI)  
