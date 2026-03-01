@@ -397,19 +397,7 @@ Rate limits are enforced at the application layer using Django REST Framework th
 
 ---
 
-# 🧠 System Architecture
 
-Frontend / Website  
-↓  
-Django REST API  
-↓  
-- MySQL (Product Data)  
-- LLaMA (Text AI)  
-- Twilio (Voice Calls)  
-- VAPI (Voice Assistant Logic)  
-- OpenAI (Speech & AI Processing)
-
----
 
 # 📞 Support
 
