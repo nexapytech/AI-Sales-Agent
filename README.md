@@ -102,24 +102,31 @@ This approach allows businesses to **interact naturally** with customers, whethe
 ###   AI Chat Flows
 
 ## 🎥 Demo  usage  AI Chat Video
-### Chat Interface
-![Chat](screenshots/ai_chat.png)
 
 Watch a short walkthrough of the system in action and ai sale agent conversation:
+
 [Watch how ai-sales chat works ](https://github.com/nexapytech/ai-sales-agent/releases/download/v1.0/ai_sales_chat.mp4)
+
 - API key generation  
 - CSV upload  
 - Conversational AI responses   
 - Order creation workflow
----
-###   Live Voice Call Flows
 
-### AI sales Voice Call Placement
-![CALL](screenshots/calls.png)
+### Chat Interface
+![Chat](screenshots/ai_chat.png)
+
+---
+
+###   Live Voice Call Flows
 
 ## 🎥 Demo  usage  AI Voice  Call
 Watch a short ai sales voice call in  action
-[Watch how ai-sales chat works ](https://github.com/nexapytech/AI-Sales-Agent/releases/download/v1.1/ai_sales_voice.mp4)
+[Watch how ai-sales Voice call works ](https://github.com/nexapytech/AI-Sales-Agent/releases/download/v1.1/ai_sales_voice.mp4)
+- Conversational AI responses 
+
+
+### AI sales Voice Call Placement
+![CALL](screenshots/calls.png)
 
 
 ---
