@@ -1,6 +1,6 @@
 ![CI](https://github.com/nexapytech/ai-sales-agent/actions/workflows/ci.yml/badge.svg)
 
-# 🛠 AI Sales Agent Dual Channel Conversational Commerce Platform
+# 🛠 AI Sales Agent Dual Channel Conversational Testing
 
 An AI-powered sales platform that allows businesses to interact with customers through **Dual Channels**:  
 - **Text Chat** (powered by LLaMA and company-specific data)  
@@ -8,7 +8,7 @@ An AI-powered sales platform that allows businesses to interact with customers t
 
 This platform transforms structured product datasets into a context-aware conversational commerce engine, enabling real-time sales support, order creation, and intelligent customer engagement.
 ---
-## problem statement
+## PROBLEM STATEMENT
 
 Many businesses have structured product data but lack a **dynamic, intelligent interface** for customer interactions. Traditional systems rely on forms, filters, or keyword searches, which are:
 - Impersonal and slow  
@@ -19,7 +19,7 @@ There is a growing need for **multi-modal interaction**, including both chat and
 
 ---
 
-## 💡 Solution
+## 💡 SOLUTION
 
 
 AI Sales Agent provides a secure, scalable **Dual Channel AI Sales Solution** that:
@@ -88,7 +88,7 @@ This approach allows businesses to **interact naturally** with customers, whethe
 ---
 ###   AI Chat Flows
 
-## 🎥 Demo  usage  AI Chat Video
+## 🎥 DEMO  USAGE  AI CHAT VIDEO
 
 Watch a short walkthrough of the system in action and ai sale agent conversation:
 
@@ -106,20 +106,20 @@ Watch a short walkthrough of the system in action and ai sale agent conversation
 
 ###   Live Voice Call Flows
 
-## 🎥 Demo  usage  AI Voice  Call
+## 🎥 DEMO  USAGE  AI VOICE  CALL
 Watch a short ai sales voice call in  action
 [Watch how ai-sales Voice call works ](https://github.com/nexapytech/AI-Sales-Agent/releases/download/v1.1/ai_sales_voice.mp4)
 - Conversational AI responses 
 
 
-### AI sales Voice Call Placement
+### AI SALE VOICE CALL PLACEMENT
 ![CALL](screenshots/calls.png)
 
 
 ---
-## 🖥 Demo interface
+## 🖥 Demo INTERFACE
 
-### Home page
+### Home Page
 ![Key](screenshots/home_page.png)
 
 ### Upload CSV
